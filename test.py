@@ -2,23 +2,23 @@ secret= 34
 attempts = 5
 
 for i in range(attempts):
-  
-guess = int(input("Guess a number between (1-50): "))
+    guess = int(input("Guess a number between (1-50): "))
 
-if guess==secret:
+ if guess==secret:
   print("You won hurray!!🎊")
+  break
   
-elif abs (secret - guess) <=3:
+ elif abs (secret - guess) <=3:
   print("🔥almost there!")
 
-elif abs(secret- guess)<=10:
+ elif abs(secret- guess)<=10:
    print("Close but not yet!")
 
-else:
+ else:
   print("Ohh no a bit far")
 
 hearts=" "
-remaining = attempts - i -1
+remaining = attempts - i - 1
 
 count = 0
 while count < remaining:
