@@ -22,3 +22,13 @@ print("markup prices:", mark_up_prices)
 item_index= items.index(chosen_item)
 chosen_price = mark_up_prices[item_index]
 print("Price of:", chosen_item, "after markup:", chosen_price)
+
+inventory[chosen_item]=inventory[chosen_item] - 1
+print(chosen_item, "Purchased remaining stock:", inventory [chosen_item])
+
+print("")
+print("=====SCHOOL STORE INVENTORY CHECKER=====")
+print("item bought:", chosen_item)
+print("price paid:", chosen_price)
+print("updated inventory:", inventory)
+print("==============================================")
