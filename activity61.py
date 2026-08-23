@@ -21,11 +21,11 @@ def main():
 
     clock = pygame.time.Clock()
 
-    done = True
+    done = False
     while not done:
         for event in pygame.event.get():
             if event.type==pygame.QUIT:
-                done=False
+                done=True
         pressed= pygame.key.get_pressed()
         if pressed[pygame.K_LEFT]: x-=5
         if pressed[pygame.K_RIGHT]: x+=5
@@ -41,7 +41,7 @@ def main():
         elif y == screen_height - sprite_height: current_color = colors["yellow"]
         else:
             current_color=colors["white"]
-        screen.fill(0,0,0)
+        screen.fill((0,0,0))
         pygame.draw.rect(screen, current_color,(x,y, sprite_width, sprite_height))
         pygame.display.flip()
         clock.tick(60)
@@ -49,5 +49,6 @@ def main():
 
 if __name__== "__main__":
     main()
+
 
 
