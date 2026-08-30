@@ -29,11 +29,11 @@ class Sprite(pygame.sprite.Sprite):
         boundary_hit= False
 
         if self.rect.left <=0 or self.rect.right >=500:
-            self.velocity[0] = self.velocity[0]
+            self.velocity[0] = -self.velocity[0]
             boundary_hit = True
 
-        if self.rect.top <00 or self.rect.bottom >= 400:
-            self.velocity[1]= self.velocity[1]
+        if self.rect.top <=0 or self.rect.bottom >= 400:
+            self.velocity[1]= -self.velocity[1]
             boundary_hit= True
 
         if boundary_hit:
